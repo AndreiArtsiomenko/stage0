@@ -33,6 +33,11 @@ li {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -173,6 +178,7 @@ body {
 }
 
 .bth-gold {
+  min-height: 55px;
   padding: 8px 72px 7px 73px;
   font-family: inherit;
   line-height: inherit;
@@ -188,12 +194,6 @@ body {
 
 /*--------------------MAIN(SKILLS)--------------------------------------*/
 
-.main__skills {}
-
-.skills {}
-
-.skills__container {}
-
 .wrapper-title {
   text-align: center;
   width: 50%;
@@ -205,7 +205,7 @@ body {
 .title-section {
   padding: 0 20px;
   font-family: 'Merriweather', serif;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 40px;
   line-height: 2;
   color: var(--color-gold);
@@ -220,11 +220,9 @@ body {
   margin: 0 -20px;
 }
 
-.item {}
-
 .item__skill {
   flex: 0 1 25%;
-  padding: 100px 20px 8px;
+  padding: 100px 20px 10px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center top;
@@ -263,6 +261,43 @@ body {
   text-align: center;
 }
 
+/*--------------------MAIN(PORTFOLIO)--------------------------------------*/
+
+.portfolio__buttons {
+  display: flex;
+  max-width: 895px;
+  padding: 60px 0;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.portfolio__button {
+  min-height: 55px;
+  min-width: 220px;
+  font-family: inherit;
+  line-height: inherit;
+  color: var(--color-gold);
+  border: 2px solid var(--color-gold);
+  background-color: var(--color-black);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.portfolio__button:hover {
+  color: var(--color-white);
+}
+
+.portfolio__button.active {
+  color: var(--color-black);
+  border: none;
+  background-color: var(--color-gold);
+}
+
+.portfolio__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px 25px;
+}
 
 /*--------------------FOOTER--------------------------------------*/
 
