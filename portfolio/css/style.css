@@ -155,7 +155,6 @@ h3 {
 }
 
 .header__nav {
-  max-width: 500px;
   margin-left: auto;
 }
 
@@ -164,12 +163,12 @@ h3 {
 }
 
 .nav__item {
-  margin-left: 30px;
+  margin: 0 15px;
 }
 
-.nav__item:last-child {
-  margin-right: 31px;
-}
+.nav__item:first-child {}
+
+.nav__item:last-child {}
 
 .nav_link,
 .switch-lng__link {
@@ -185,14 +184,11 @@ h3 {
 .switch-lng__list {
   display: flex;
   align-items: center;
+  margin-left: 19px;
 }
 
-.switch-lng__item:first-child {
-  margin-right: 9px;
-}
-
-.switch-lng__item:last-child {
-  margin-left: 8px;
+.switch-lng__item:nth-child(2) {
+  margin: 0 9px 0 10px;
 }
 
 .switch-lng__link.active {
@@ -459,6 +455,14 @@ textarea.input {
   display: flex;
   justify-content: space-between;
   padding: 50px 0;
+}
+
+.footer__row a {
+  transition: var(--transit);
+}
+
+.footer__row a:hover {
+  color: var(--color-gold);
 }
 
 .footer__column {
