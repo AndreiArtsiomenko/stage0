@@ -42,13 +42,15 @@
         <div class="hero__container container">
           <div class="hero__body">
             <h1 class="hero__title">Alexa Rise</h1>
-            <div class="hero__text">
+            <p class="hero__text">
               Save sincere emotions, romantic feelings and happy moments of life together with professional photographer
               Alexa Rise
-            </div>
-            <div class="hero__buttons">
-              <button class="hero__btn bth-gold">Hire me</button>
-            </div>
+            </p>
+            <form action="#">
+              <div class="hero__buttons">
+                <button class="hero__btn bth-gold">Hire me</button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
@@ -60,19 +62,19 @@
           <div class="skills__items item">
             <div class="item__skill">
               <h4 class="item__subtitle">Digital photography</h4>
-              <div class="item__text">High-quality photos in the studio and on the nature</div>
+              <p class="item__text">High-quality photos in the studio and on the nature</p>
             </div>
             <div class="item__skill">
               <h4 class="item__subtitle">Video shooting</h4>
-              <div class="item__text">Capture your moments so that they always stay with you</div>
+              <p class="item__text">Capture your moments so that they always stay with you</p>
             </div>
             <div class="item__skill">
               <h4 class="item__subtitle">Retouch</h4>
-              <div class="item__text">I strive to make photography surpass reality</div>
+              <p class="item__text">I strive to make photography surpass reality</p>
             </div>
             <div class="item__skill">
               <h4 class="item__subtitle">Audio</h4>
-              <div class="item__text">Professional sounds recording for video, advertising, portfolio</div>
+              <p class="item__text">Professional sounds recording for video, advertising, portfolio</p>
             </div>
           </div>
         </div>
@@ -83,12 +85,14 @@
             <div class="portfolio__wrapper wrapper-title">
               <h2><span class="portfolio__title title-section">Portfolio</span></h2>
             </div>
-            <div class="portfolio__buttons">
-              <button class="portfolio__button">Winter</button>
-              <button class="portfolio__button">Spring</button>
-              <button class="portfolio__button">Summer</button>
-              <button class="portfolio__button active">Autumn</button>
-            </div>
+            <form action="#">
+              <div class="portfolio__buttons">
+                <button class="portfolio__button bth-transparent">Winter</button>
+                <button class="portfolio__button bth-transparent">Spring</button>
+                <button class="portfolio__button bth-transparent">Summer</button>
+                <button class="portfolio__button bth-transparent active">Autumn</button>
+              </div>
+            </form>
             <div class="portfolio__items">
               <div class="portfolio__img-item">
                 <img src="./assets/img/portfolio-img-1.jpg" alt="Couple of lovers" class="photo">
@@ -111,8 +115,81 @@
           </div>
         </div>
       </section>
-      <section class="main__video video"></section>
-      <section class="main__price price"></section>
+      <section class="main__video video" id="video">
+        <div class="video__container container">
+          <div class="video__wrapper wrapper-title">
+            <h2><span class="video__title title-section">Video</span></h2>
+          </div>
+          <div class="video__player player-video">
+            <div class="player-video__body">
+              <img src="./assets/img/video-player.jpg" alt="Video player">
+              <button class="player-video__button"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main__price price" id="price">
+        <div class="price__container container">
+          <div class="price__wrapper wrapper-title">
+            <h2><span class="price__title title-section">Price</span></h2>
+          </div>
+          <div class="price__row">
+            <div class="price__column">
+              <div class="price__item-price item-price">
+                <h3 class="item-price__title">Standard</h3>
+                <p class="item-price__cost">500 $</p>
+                <div class="item-price__text">
+                  <span class="item-price__span">One location</span>
+                  <span class="item-price__span">120 photos in color</span>
+                  <span class="item-price__span">12 photos in retouch</span>
+                  <span class="item-price__span">Readiness 2-3 weeks</span>
+                  <span class="item-price__span">Make up, visage</span>
+                </div>
+                <form action="#">
+                  <div class="item-price__buttons">
+                    <button class="item-price__btn bth-gold">Order shooting</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="price__column">
+              <div class="price__item-price item-price">
+                <h3 class="item-price__title">Premium</h3>
+                <p class="item-price__cost">700 $</p>
+                <div class="item-price__text">
+                  <span class="item-price__span">One or two locations</span>
+                  <span class="item-price__span">200 photos in color</span>
+                  <span class="item-price__span">20 photos in retouch</span>
+                  <span class="item-price__span">Readiness 1-2 weeks</span>
+                  <span class="item-price__span">Make up, visage</span>
+                </div>
+                <form action="#">
+                  <div class="item-price__buttons">
+                    <button class="item-price__btn bth-gold">Order shooting</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="price__column">
+              <div class="price__item-price item-price">
+                <h3 class="item-price__title">Gold</h3>
+                <p class="item-price__cost">1000 $</p>
+                <div class="item-price__text">
+                  <span class="item-price__span">Three locations or more</span>
+                  <span class="item-price__span">300 photos in color</span>
+                  <span class="item-price__span">50 photos in retouch</span>
+                  <span class="item-price__span">Readiness 1 week</span>
+                  <span class="item-price__span">Make up, visage, hairstyle</span>
+                </div>
+                <form action="#">
+                  <div class="item-price__buttons">
+                    <button class="item-price__btn bth-gold">Order shooting</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+      </section>
       <section class="main__contacts contacts"></section>
     </main>
     <footer class="footer">
