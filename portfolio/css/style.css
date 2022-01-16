@@ -184,6 +184,7 @@ h3 {
 
 .switch-lng__list {
   display: flex;
+  align-items: center;
 }
 
 .switch-lng__item:first-child {
@@ -453,3 +454,73 @@ textarea.input {
 }
 
 /*--------------------FOOTER--------------------------------------*/
+
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+.footer__column {
+  line-height: 2.5;
+}
+
+.left-column__row {
+  display: flex;
+}
+
+.year {
+  margin: 0 20px;
+}
+
+.school {
+  padding-left: 20px;
+}
+
+.social__row {
+  display: flex;
+  padding: 9px 0;
+}
+
+.social__link {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  transition: var(--transit);
+}
+
+.social__link:last-child {
+  margin-right: 0px;
+}
+
+.social__link:hover {
+  filter: invert(26%) sepia(18%) saturate(529%) hue-rotate(7deg) brightness(90%) contrast(94%);
+}
+
+.social__inst {
+  background-image: url('../assets/svg/inst.svg');
+}
+
+.social__fb {
+  background-image: url('../assets/svg/fb.svg');
+}
+
+.social__tw {
+  background-image: url('../assets/svg/tw.svg');
+}
+
+.social__pinterest {
+  background-image: url('../assets/svg/pinterest.svg');
+}
+
+.social__link a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
