@@ -166,10 +166,6 @@ h3 {
   margin: 0 15px;
 }
 
-.nav__item:first-child {}
-
-.nav__item:last-child {}
-
 .nav_link,
 .switch-lng__link {
   line-height: 2.5;
