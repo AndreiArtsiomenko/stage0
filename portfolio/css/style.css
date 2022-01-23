@@ -412,6 +412,18 @@ h3 {
   gap: 25px 25px;
 }
 
+/*--------------------MAIN(PORTFOLIO)(adaptive)--------------------------------------*/
+
+@media (max-width: 768px) {
+  .portfolio__buttons {
+    padding: 51px 0;
+  }
+
+  .portfolio__items {
+    margin-top: 10px;
+  }
+}
+
 /*--------------------MAIN(VIDEO)--------------------------------------*/
 
 .logo {
