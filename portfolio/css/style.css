@@ -62,6 +62,10 @@ body {
   background-color: var(--color-black);
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3 {
@@ -190,13 +194,13 @@ h3 {
   margin: 0 15px;
 }
 
-.nav_link,
+.nav__link,
 .switch-lng__link {
   line-height: 2.5;
   transition: var(--transit);
 }
 
-.nav_link:hover,
+.nav__link:hover,
 .switch-lng__link:hover {
   color: var(--color-gold);
 }
@@ -223,32 +227,40 @@ h3 {
     padding-left: 60px;
     padding-right: 64px;
     background-image: url('../assets/img/bg-tablet.jpg');
-    justify-content: space-between;
   }
 
-  .header__nav {}
+  .header__logo {
+    order: 0;
+  }
+
+  .header__switch-lng {
+    margin-left: auto;
+    order: 1;
+  }
 
   .switch-lng__link {
     font-weight: 700;
   }
 
   .nav__icon {
+    position: relative;
     z-index: 10;
     display: block;
-    position: relative;
     width: 50px;
     height: 26px;
+    margin-left: 20px;
     cursor: pointer;
+    order: 2;
   }
 
   .nav__icon::before,
   .nav__icon::after,
   .nav__icon span {
-    left: 0;
     position: absolute;
+    left: 0;
     height: 3px;
     width: 100%;
-    transition: all var(--transit) ease 0s;
+    transition: all 0.5s ease 0s;
     background-color: var(--color-white);
   }
 
@@ -270,26 +282,50 @@ h3 {
     transform: scale(1) translate(0px, -50%);
   }
 
-  .header__nav {
-    overflow-x: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translate(-100%, 0);
-    width: 100%;
-    height: 100%;
-    transform: translate(-100%, 0);
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 100px 30px 30px 30px;
-    transition: right var(--transit) ease 0s;
+  .nav__icon.open span {
+    transform: scale(0) translate(0px, -50%);
   }
 
-  .header__nav.active {
-    transform: translate(0, 0);
+  .nav__icon.open::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+  }
+
+  .nav__icon.open::after {
+    top: 50%;
+    transform: rotate(45deg) translate(0, -50%);
+  }
+
+
+  .header__nav {
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    right: -620px;
+    width: 620px;
+    height: 100%;
+    padding: 134px 30px 30px 127px;
+    transition: right 0.5s ease 0s;
+  }
+
+  .nav__link {
+    font-size: 35px;
+    line-height: 73px;
+  }
+
+  .header__nav.open {
+    background-color: var(--color-black);
+    right: 0px;
   }
 
   .nav__list {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 620px) {
+  .header__nav {
+    width: 100%;
   }
 }
 
