@@ -290,7 +290,7 @@ h3 {
 
 .wrapper-title {
   text-align: center;
-  width: 364px;
+  width: 50%;
   margin: 0 auto;
   padding-top: 100px;
   background-image: linear-gradient(to top, var(--color-black) 39px, var(--color-gold) 39px, var(--color-gold) 41px, var(--color-black) 41px);
@@ -614,7 +614,7 @@ textarea.input {
   .contacts__container {
     justify-content: center;
     margin-top: 80px;
-    padding-top: 60px;
+    padding-top: 61px;
     padding-bottom: 111px;
     background-size: auto 600px;
     background-image: url('../assets/img/contacts-tablet.png');
@@ -631,6 +631,12 @@ textarea.input {
 
   .contacts__form {
     margin-top: 40px;
+  }
+}
+
+@media (max-width: 470px) {
+  .contacts__body {
+    min-width: 300px;
   }
 }
 
@@ -712,4 +718,24 @@ textarea.input {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/*--------------------FOOTER(adaptive)--------------------------------------*/
+
+@media (max-width: 768px) {
+  .footer__row {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 17px;
+  }
+
+  .school {
+    margin-top: -10px;
+    padding-left: 5px;
+  }
+
+  .social__row {
+    padding: 16px 0 1px 1px;
+  }
 }
