@@ -610,6 +610,30 @@ textarea.input {
 
 /*--------------------MAIN(CONTACT)(adaptive)--------------------------------------*/
 
+@media (max-width: 768px) {
+  .contacts__container {
+    justify-content: center;
+    margin-top: 80px;
+    padding-top: 60px;
+    padding-bottom: 111px;
+    background-size: auto 600px;
+    background-image: url('../assets/img/contacts-tablet.png');
+  }
+
+  .contacts__title {
+    margin-bottom: 10px;
+    font-size: 32px;
+  }
+
+  .contacts__body {
+    text-align: center;
+  }
+
+  .contacts__form {
+    margin-top: 40px;
+  }
+}
+
 /*--------------------FOOTER--------------------------------------*/
 
 .footer__row {
