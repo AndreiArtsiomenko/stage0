@@ -44,6 +44,7 @@ textarea {
 img {
   max-width: 100%;
   display: block;
+  margin: 0;
 }
 
 html {
@@ -461,10 +462,27 @@ h3 {
   filter: invert(26%) sepia(18%) saturate(529%) hue-rotate(7deg) brightness(90%) contrast(94%);
 }
 
+/*--------------------MAIN(VIDEO)(adaptive)--------------------------------------*/
+
+@media (max-width: 768px) {
+  .video__player {
+    margin-left: -60px;
+    margin-right: -94px;
+    padding-bottom: 5px;
+  }
+
+  .player-video__button {
+    min-height: 65px;
+    min-width: 65px;
+    left: 350px;
+  }
+}
+
 /*--------------------MAIN(PRICE)--------------------------------------*/
 
 .price__row {
   display: flex;
+  flex-wrap: wrap;
   margin: 60px -12.5px 0;
 }
 
@@ -505,6 +523,27 @@ h3 {
 
 .item-price__buttons {
   padding-bottom: 40px;
+}
+
+/*--------------------MAIN(PRICE)(adaptive)--------------------------------------*/
+
+@media (max-width: 768px) {
+  .price__row {
+    justify-content: center;
+  }
+
+  .price__column {
+    flex: 0 1 67%;
+    margin-bottom: 50px;
+  }
+
+  .price__column:last-child {
+    margin-bottom: 0px;
+  }
+
+  .price__column:first-child {
+    margin-top: -8px;
+  }
 }
 
 /*--------------------MAIN(CONTACT)--------------------------------------*/
@@ -568,6 +607,8 @@ textarea.input {
 .contacts__button {
   margin-top: 30px;
 }
+
+/*--------------------MAIN(CONTACT)(adaptive)--------------------------------------*/
 
 /*--------------------FOOTER--------------------------------------*/
 
