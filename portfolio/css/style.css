@@ -96,7 +96,7 @@ h3 {
 
 /*--------------------BUTTONS--------------------------------------*/
 
-.bth-gold {
+.btn-gold {
   display: inline-block;
   min-width: 220px;
   min-height: 55px;
@@ -107,11 +107,11 @@ h3 {
   transition: var(--transit);
 }
 
-.bth-gold:hover {
+.btn-gold:hover {
   color: var(--color-white);
 }
 
-.bth-transparent {
+.portfolio-btn {
   display: inline-block;
   min-width: 220px;
   min-height: 55px;
@@ -123,12 +123,12 @@ h3 {
   transition: var(--transit);
 }
 
-.bth-transparent:hover,
-.bth-transparent.active:hover {
+.portfolio-btn:hover,
+.portfolio-btn.active:hover {
   color: var(--color-white);
 }
 
-.bth-transparent.active {
+.portfolio-btn.active {
   color: var(--color-black);
   border: none;
   background-color: var(--color-gold);
@@ -136,8 +136,8 @@ h3 {
 
 @media (max-width: 768px) {
 
-  .bth-gold,
-  .bth-transparent {
+  .btn-gold,
+  .portfolio-btn {
     min-width: 219px;
     min-height: 54px;
   }
@@ -194,25 +194,38 @@ h3 {
   margin: 0 15px;
 }
 
-.nav__link,
-.switch-lng__link {
+.nav__link {
   line-height: 2.5;
   transition: var(--transit);
 }
 
 .nav__link:hover,
-.switch-lng__link:hover {
+.switch-lng__btn:hover {
   color: var(--color-gold);
 }
 
-.switch-lng__list {
+.switch-lng__btns {
   display: flex;
   align-items: center;
   margin-left: 19px;
 }
 
-.switch-lng__item:nth-child(2) {
-  margin: 0 9px 0 10px;
+.switch-lng__btn {
+  display: inline-block;
+  line-height: inherit;
+  color: var(--color-white);
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: var(--transit);
+}
+
+.btn-en {
+  margin-right: 9px;
+}
+
+.btn-ru {
+  margin-left: 10px;
 }
 
 .switch-lng__link.active {
@@ -238,7 +251,7 @@ h3 {
     order: 1;
   }
 
-  .switch-lng__link {
+  .switch-lng__btn {
     font-weight: 700;
   }
 
@@ -305,7 +318,7 @@ h3 {
     width: 620px;
     height: 100%;
     padding: 134px 30px 30px 127px;
-    transition: right 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
   }
 
   .nav__link {
