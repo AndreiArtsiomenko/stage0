@@ -34,11 +34,11 @@
           </ul>
         </nav>
         <div class="header__switch-lng switch-lng">
-          <ul class="switch-lng__list">
-            <li class="switch-lng__item"><a href="#" class="switch-lng__link active">en</a></li>
-            <li class="switch-lng__item">/</li>
-            <li class="switch-lng__item"><a href="#" class="switch-lng__link">ru</a></li>
-          </ul>
+          <form class="switch-lng__btns">
+            <button class="switch-lng__btn btn-en">en</button>
+            <p class="switch-lng__item">/</p>
+            <button class="switch-lng__btn btn-ru">ru</button>
+          </form>
         </div>
       </div>
     </header>
@@ -53,7 +53,7 @@
             </p>
             <form action="#">
               <div class="hero__buttons">
-                <button class="hero__btn bth-gold">Hire me</button>
+                <button class="hero__btn btn-gold">Hire me</button>
               </div>
             </form>
           </div>
@@ -90,31 +90,31 @@
             <div class="portfolio__wrapper wrapper-title">
               <h2><span class="portfolio__title title-section">Portfolio</span></h2>
             </div>
-            <form action="#">
+            <form action="#portfolio">
               <div class="portfolio__buttons">
-                <button class="portfolio__button bth-transparent">Winter</button>
-                <button class="portfolio__button bth-transparent">Spring</button>
-                <button class="portfolio__button bth-transparent">Summer</button>
-                <button class="portfolio__button bth-transparent active">Autumn</button>
+                <button class="portfolio__button portfolio-btn" data-season="winter">Winter</button>
+                <button class="portfolio__button portfolio-btn" data-season="spring">Spring</button>
+                <button class="portfolio__button portfolio-btn" data-season="summer">Summer</button>
+                <button class="portfolio__button portfolio-btn" data-season="autumn">Autumn</button>
               </div>
             </form>
             <div class="portfolio__items">
               <div class="portfolio__img-item">
-                <img src="./assets/img/portfolio-img-1.jpg" alt="Couple of lovers" class="photo">
+                <img src="./assets/img/autumn/1.jpg" alt="portfolio-image" class="portfolio-img">
               </div>
               <div class="portfolio__photo-item">
-                <img src="./assets/img/portfolio-img-2.jpg" alt="Tree and horse" class="photo">
+                <img src="./assets/img/autumn/2.jpg" alt="portfolio-image" class="portfolio-img">
               </div>
               <div class="portfolio__photo-item">
-                <img src="./assets/img/portfolio-img-3.jpg" alt="Child" class="photo"></div>
+                <img src="./assets/img/autumn/3.jpg" alt="portfolio-image" class="portfolio-img"></div>
               <div class="portfolio__photo-item">
-                <img src="./assets/img/portfolio-img-4.jpg" alt="Trees" class="photo">
+                <img src="./assets/img/autumn/4.jpg" alt="portfolio-image" class="portfolio-img">
               </div>
               <div class="portfolio__photo-item">
-                <img src="./assets/img/portfolio-img-5.jpg" alt="Couple of lovers 2" class="photo">
+                <img src="./assets/img/autumn/5.jpg" alt="portfolio-image" class="portfolio-img">
               </div>
               <div class="portfolio__photo-item">
-                <img src="./assets/img/portfolio-img-6.jpg" alt="Girl taking photo" class="photo">
+                <img src="./assets/img/autumn/6.jpg" alt="portfolio-image" class="portfolio-img">
               </div>
             </div>
           </div>
@@ -152,7 +152,7 @@
                 </div>
                 <form action="#">
                   <div class="item-price__buttons">
-                    <button class="item-price__btn bth-gold">Order shooting</button>
+                    <button class="item-price__btn btn-gold">Order shooting</button>
                   </div>
                 </form>
               </div>
@@ -170,7 +170,7 @@
                 </div>
                 <form action="#">
                   <div class="item-price__buttons">
-                    <button class="item-price__btn bth-gold">Order shooting</button>
+                    <button class="item-price__btn btn-gold">Order shooting</button>
                   </div>
                 </form>
               </div>
@@ -188,7 +188,7 @@
                 </div>
                 <form action="#">
                   <div class="item-price__buttons">
-                    <button class="item-price__btn bth-gold">Order shooting</button>
+                    <button class="item-price__btn btn-gold">Order shooting</button>
                   </div>
                 </form>
               </div>
@@ -211,7 +211,7 @@
                 <textarea name="message" placeholder="Message" class="input"></textarea>
               </div>
               <div class="contacts__button">
-                <button class="contacts__btn bth-gold">Send message</button>
+                <button class="contacts__btn btn-gold">Send message</button>
               </div>
             </form>
           </div>
