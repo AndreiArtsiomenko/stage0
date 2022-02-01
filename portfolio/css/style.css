@@ -51,7 +51,6 @@ html {
   scroll-behavior: smooth;
 }
 
-html,
 body {
   height: 100%;
   font-family: 'Inter', sans-serif;
@@ -94,6 +93,33 @@ h3 {
   }
 }
 
+/*--------------------LIGHT-THEME--------------------------------------*/
+
+.main__skills.light-theme,
+.main__portfolio.light-theme,
+.main__video.light-theme,
+.main__price.light-theme {
+  background-color: var(--color-white);
+}
+
+.portfolio-btn.light-theme,
+.item-price__title.light-theme,
+.item-price__span.light-theme,
+.item__text.light-theme,
+.item__subtitle.light-theme {
+  color: var(--color-black);
+}
+
+.wrapper-title.light-theme {
+  background-image: linear-gradient(to top, var(--color-white) 39px, var(--color-black) 39px, var(--color-black) 41px, var(--color-white) 41px);
+}
+
+.title-section.light-theme {
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+
 /*--------------------BUTTONS--------------------------------------*/
 
 .btn-gold {
@@ -126,6 +152,7 @@ h3 {
 .portfolio-btn:hover,
 .portfolio-btn.active:hover {
   color: var(--color-white);
+  background-color: var(--color-gold);
 }
 
 .portfolio-btn.active {
@@ -242,6 +269,14 @@ h3 {
   background-size: contain;
   cursor: pointer;
   transition: var(--transit);
+}
+
+.header__theme.moon {
+  background: url('../assets/svg/moon.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  transition: 0.05s;
 }
 
 .header__theme:hover {
@@ -490,8 +525,6 @@ h3 {
   text-align: center;
 }
 
-
-
 /*--------------------MAIN(SKILLS)(adaptive)--------------------------------------*/
 
 @media (max-width: 1200px) {
@@ -628,7 +661,7 @@ h3 {
 
 .price__column {
   flex: 0 1 33.333%;
-  padding: 0 12.5px;
+  padding: 0 12.5px 100px;
 }
 
 .price__item-price {
@@ -691,7 +724,6 @@ h3 {
 .contacts__container {
   display: flex;
   justify-content: flex-end;
-  margin-top: 100px;
   padding-top: 60px;
   padding-bottom: 195px;
   background-image: url('../assets/img/contacts.jpg');
@@ -781,6 +813,9 @@ textarea.input {
 }
 
 /*--------------------FOOTER--------------------------------------*/
+.footer__container {
+  background-color: var(--color-black);
+}
 
 .footer__row {
   display: flex;
