@@ -178,6 +178,36 @@ function preloadImages(arr) {
 
 preloadImages(seasons);
 
-/*--------------------CACHE IMAGES--------------------------------------*/
+/*--------------------THEMES--------------------------------------*/
 
-console.log('Score 75/79\n\n - Вёрстка соответствует макету +42\n блок <header> +3\n секция hero +6\n секция skills +6\n секция portfolio +6\n секция video +3\n секция price +6\n секция contacts +6\n блок <footer> +6\n\n - Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки. +15\n\n - На ширине экрана 768рх и меньше реализовано адаптивное меню +22')
+const theme = document.querySelector('.header__theme');
+const mainSkills = document.querySelector('.main__skills');
+const mainPortfolio = document.querySelector('.main__portfolio');
+const mainVideo = document.querySelector('.main__video');
+const mainPrice = document.querySelector('.main__price');
+const portfolioBtn = document.querySelectorAll('.portfolio-btn');
+const titleSection = document.querySelectorAll('.title-section');
+const wrapperTitle = document.querySelectorAll('.wrapper-title');
+const itemText = document.querySelectorAll('.item__text');
+const itemSubtitle = document.querySelectorAll('.item__subtitle');
+const itemPriceTitle = document.querySelectorAll('.item-price__title');
+const itemPriceSpan = document.querySelectorAll('.item-price__span');
+
+function changeClassTheme() {
+  const headerNavOpen = document.querySelector('.header__nav.open');
+  const arr = [...portfolioBtn, ...wrapperTitle, ...titleSection, ...itemText, ...itemSubtitle, ...itemPriceTitle, ...itemPriceSpan, mainSkills, mainPortfolio, mainVideo, mainPrice]
+  arr.forEach((item) => item.classList.toggle('light-theme'));
+};
+
+function changeIcon() {
+  theme.classList.toggle('moon');
+}
+
+theme.addEventListener("click", changeClassTheme);
+theme.addEventListener("click", changeIcon);
+
+
+console.log('Score 72/75\n\n - Смена изображений в секции portfolio +25\n\n - Перевод страницы на два языка +25\n\n - Переключение светлой и тёмной темы +22\n Бургер меню не меняет цвет на светлый - 3 балла\n\n - Дополнительный функционал 0')
+
+
+//'.nav__icon::before', '.nav__icon::after', '.nav__icon span', '.nav__link', '.header__nav']
