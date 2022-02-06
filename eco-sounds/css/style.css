@@ -103,6 +103,10 @@ a {
   filter: invert(26%) sepia(18%) saturate(529%) hue-rotate(7deg) brightness(90%) contrast(94%);
 }
 
+.header__logo.active:hover {
+  filter: none;
+}
+
 .header__menu {
   margin-left: auto;
 }
@@ -149,6 +153,13 @@ a {
   border: none;
   cursor: pointer;
   transition: 0.5s;
+}
+
+.pause {
+  background: url('../assets/svg/pause.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
 }
 
 .main__btn-play:hover {
