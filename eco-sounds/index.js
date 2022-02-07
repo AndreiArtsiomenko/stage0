@@ -1,12 +1,10 @@
 const playBtn = document.querySelector('.main__btn-play');
+const audio = new Audio('./assets/audio/forest.mp3');
 let isPlay = false;
 
-const audio = new Audio();
-
 function playAudio() {
-  audio.src = './assets/audio/forest.mp3';
-  audio.currentTime = 0;
   if (!isPlay) {
+    audio.currentTime = 0;
     audio.play();
     playBtn.classList.add('pause');
     isPlay = true;
@@ -15,11 +13,13 @@ function playAudio() {
     isPlay = false;
     playBtn.classList.remove('pause');
   }
-}
+};
 
-playBtn.addEventListener('click', playAudio)
+playBtn.addEventListener('click', playAudio);
 
-const menuList = document.querySelector('.header__conteiner')
+/*----------------------CHANGE CLASS ACTIVE-------------------------------------------------------------*/
+
+const menuList = document.querySelector('.header__container');
 
 function changeClassActive(event) {
   const reActiveLink = document.querySelectorAll('.item-menu');
@@ -28,21 +28,32 @@ function changeClassActive(event) {
   if (event.target.classList.contains('item-menu')) {
     event.target.classList.add('active')
   }
-}
+};
 
-menuList.addEventListener("click", changeClassActive)
+menuList.addEventListener("click", changeClassActive);
 
+/*----------------------CHANGE IMAGE--------------------------------------------------------------------*/
 
 const mainImage = document.querySelector('.main')
 
 function changeImage(event) {
   if (event.target.classList.contains('item-menu')) {
-    let background = event.target.dataset.background;
-    mainImage.style.background = "url('./assets/img/'+background+'.jpg') no-repeat top/cover";
+    let background = event.target.dataset.bird;
+    mainImage.style.background = `url('./assets/img/${background}.jpg') no-repeat top/cover`;
   }
-}
+};
 
+menuList.addEventListener("click", changeImage);
 
-menuList.addEventListener("click", changeImage)
+/*----------------------CHANGE SOUND--------------------------------------------------------------------*/
 
-jsx style background image url
+function changeSound(event) {
+  if (event.target.classList.contains('item-menu')) {
+    let sound = event.target.dataset.bird;
+    audio.src = `./assets/audio/${sound}.mp3`;
+    isPlay = false;
+    playAudio(isPlay)
+  }
+};
+
+menuList.addEventListener("click", changeSound);
