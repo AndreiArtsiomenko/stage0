@@ -143,9 +143,7 @@ a {
   align-items: center;
   flex: 1 1 auto;
   height: calc(100% - 120px);
-  background: url('../assets//img/forest.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url("../assets/img/forest.jpg") no-repeat top/cover;
 }
 
 .main__btn-play {

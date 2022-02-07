@@ -31,3 +31,18 @@ function changeClassActive(event) {
 }
 
 menuList.addEventListener("click", changeClassActive)
+
+
+const mainImage = document.querySelector('.main')
+
+function changeImage(event) {
+  if (event.target.classList.contains('item-menu')) {
+    let background = event.target.dataset.background;
+    mainImage.style.background = "url('./assets/img/'+background+'.jpg') no-repeat top/cover";
+  }
+}
+
+
+menuList.addEventListener("click", changeImage)
+
+jsx style background image url
