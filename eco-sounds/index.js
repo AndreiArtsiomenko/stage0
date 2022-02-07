@@ -18,3 +18,16 @@ function playAudio() {
 }
 
 playBtn.addEventListener('click', playAudio)
+
+const menuList = document.querySelector('.header__conteiner')
+
+function changeClassActive(event) {
+  const reActiveLink = document.querySelectorAll('.item-menu');
+  reActiveLink.forEach((item) => item.classList.remove('active'));
+
+  if (event.target.classList.contains('item-menu')) {
+    event.target.classList.add('active')
+  }
+}
+
+menuList.addEventListener("click", changeClassActive)

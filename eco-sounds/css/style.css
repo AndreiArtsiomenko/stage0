@@ -28,10 +28,9 @@ a {
   text-decoration: none;
 }
 
-ul[class],
-ol[class],
-li[class] {
-  padding: 0;
+ul,
+ol,
+li {
   list-style: none;
 }
 
@@ -115,20 +114,26 @@ a {
   display: flex;
 }
 
-.menu__item:not(:last-child) {
+.menu__item {
   margin-right: 30px;
-}
-
-.menu__link {
   padding: 5px;
   transition: color 0.5s ease 0s;
+  cursor: pointer;
 }
 
-.menu__link:hover {
+.menu__item:last-child {
+  margin-right: 0;
+}
+
+.menu__item:hover {
   color: #bdae82;
 }
 
-.menu__link.active {
+.menu__item.active {
+  color: #bdae82;
+}
+
+.menu__item.active:hover {
   color: #bdae82;
 }
 
