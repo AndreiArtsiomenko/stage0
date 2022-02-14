@@ -105,10 +105,11 @@ a {
 }
 
 .header__search {
+  position: relative;
   width: 330px;
 }
 
-.header__search-inp {
+.search__inp {
   width: 100%;
   padding: 5px 45px 5px 15px;
   font-size: 18px;
@@ -118,8 +119,30 @@ a {
   border: 1px solid #dbd3d3;
 }
 
-.header__search-inp:focus {
+.search__inp:focus {
   box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.2);
+}
+
+.search__btn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.search__btn::before {
+  content: "\f002";
+  font-family: FontAwesome;
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+}
+
+.search__btn:hover::before {
+  color: #FFA500;
 }
 
 /*----------------------MAIN---------------------------------------------------------------*/
