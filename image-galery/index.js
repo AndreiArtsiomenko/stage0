@@ -1,5 +1,5 @@
 const apiKey = 'UxfSEhDor1r1v1sLqoxWvXTZJ7VwuhQUX1VyBCUjg_g';
-const url = `https://api.unsplash.com/search/photos?query=men&client_id=${apiKey}`;
+const url = `https://api.unsplash.com/search/photos?query=js&per_page=30&orientation=landscape&client_id=${apiKey}`;
 
 
 async function getData() {

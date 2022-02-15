@@ -151,13 +151,22 @@ a {
   flex: 1 1 auto;
 }
 
-.main__container {}
-
 .main__grid {
+  margin-top: 30px;
+  margin-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+  gap: 20px;
+}
+
+.main-img {
+  width: 400px;
+  height: 250px;
+  border-radius: 2px;
+  object-fit: cover;
+  cursor: pointer;
 }
 
 /*----------------------FOOTER-------------------------------------------------------------*/
