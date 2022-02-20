@@ -1,6 +1,6 @@
 :root {
-  --color-text: #00122e;
-  --color-background: #0abf53;
+  --color-1: #00122e;
+  --color-2: #0abf53;
   --transit: 0.3s;
 }
 
@@ -52,14 +52,14 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 500;
   font-size: 22px;
-  color: var(--color-text);
-  background-color: var(--color-background);
+  color: var(--color-1);
+  background-color: var(--color-2);
   line-height: 1.5;
   scroll-behavior: smooth;
 }
 
 a {
-  color: var(--color-text);
+  color: var(--color-2);
 }
 
 .wrapper {
@@ -78,13 +78,14 @@ a {
 /*----------------------HEADER-------------------------------------------------------------*/
 
 .header {
-  border-bottom: 2px solid var(--color-text);
+  background-color: var(--color-1);
 }
 
 .header__container {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--color-2);
 }
 
 .header__title h1 {
@@ -93,22 +94,64 @@ a {
 
 /*----------------------MAIN---------------------------------------------------------------*/
 
-.main {}
+.main {
+  flex: 1 1 auto;
+}
 
-.main__container {}
+.main__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-.main__grid {}
+.main__grid {
+  width: 306px;
+  height: 306px;
+  margin: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--color-1);
+  gap: 3px;
+}
 
-.main__box {}
+.main__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: var(--color-2);
+  font-size: 62px;
+  cursor: pointer;
+}
 
 .main__button {}
 
-.btn {}
+.btn {
+  padding: 5px 30px;
+  color: var(--color-1);
+  background-color: transparent;
+  border: 2px solid var(--color-1);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color, background-color 0.8s ease-out, transform 0.2s ease-out;
+  transform 0.2s ease-out;
+}
+
+.btn:hover {
+  color: var(--color-2);
+  background-color: var(--color-1);
+}
+
+.btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 -5px 15px rgba(0, 18, 46, 0.3);
+}
 
 /*----------------------FOOTER-------------------------------------------------------------*/
 
 .footer {
-  border-top: 2px solid var(--color-text);
+  background-color: var(--color-1);
 }
 
 .footer__container {
@@ -116,6 +159,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: var(--color-2);
 }
 
 .footer__data {
@@ -132,7 +176,7 @@ a {
 }
 
 .footer__github:hover {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .rsschool__link {
@@ -148,5 +192,5 @@ a {
 }
 
 .rsschool__link:hover {
-  opacity: 0.7;
+  opacity: 0.6;
 }
