@@ -1,0 +1,145 @@
+:root {
+  --color-text: #00122e;
+  --color-background: #0abf53;
+  --transit: 0.3s;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--color-text);
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/*----------------------HEADER-------------------------------------------------------------*/
+
+.header {}
+
+.header__container {}
+
+.header__title {}
+
+/*----------------------MAIN---------------------------------------------------------------*/
+
+.main {}
+
+.main__container {}
+
+.main__grid {}
+
+.main__box {}
+
+.main__button {}
+
+.btn {}
+
+/*----------------------FOOTER-------------------------------------------------------------*/
+
+.footer {
+  border-top: 2px solid var(--color-text);
+  ;
+}
+
+.footer__container {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__data {
+  display: flex;
+  align-items: center;
+}
+
+.footer__year {
+  padding: 0 20px;
+}
+
+.footer__github {
+  transition: var(--transit);
+}
+
+.footer__github:hover {
+  opacity: 0.7;
+}
+
+.rsschool__link {
+  width: 135px;
+  height: 50px;
+  background: url('./assets/cvg/rss.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: var(--transit);
+}
+
+.rsschool__link:hover {
+  opacity: 0.7;
+}
