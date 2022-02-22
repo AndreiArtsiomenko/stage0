@@ -1,5 +1,9 @@
 const mainGrid = document.querySelector('.main__grid');
 const mainBoxes = document.querySelectorAll('.main__box');
+const mainModalWindow = document.querySelector('.main__modal-window')
+const resultWin = document.querySelector('.result__win');
+const resultMoves = document.querySelector('.result__moves');
+const windowModalBtn = document.querySelector('.window-modal__btn');
 let playerMove = 0;
 let playerWin = '';
 const combinations = [
@@ -14,7 +18,7 @@ const combinations = [
 ];
 
 
-mainGrid.addEventListener('click', function(e) {
+mainGrid.addEventListener('click', e => {
     if (e.target.className = 'main__box') {
         if (e.target.innerHTML !== '') return;
         playerMove % 2 === 0 ? e.target.innerHTML = 'X' : e.target.innerHTML = 'O';
@@ -37,7 +41,6 @@ function checkResultValidation() {
 }
 
 function showWinner(win) {
-    console.log(`Winner ${win}`);
     let counter = 0;
     for (let i of mainBoxes) {
         if (i.innerHTML !== '') counter++
