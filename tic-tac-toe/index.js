@@ -49,3 +49,10 @@ function showWinner(win) {
     resultMoves.innerHTML = `Moves: ${counter}`
     mainModalWindow.style.display = 'block'
 };
+
+function closeWindowModal() {
+    mainModalWindow.style.display = 'none';
+    location.reload();
+}
+
+windowModalBtn.addEventListener('click', closeWindowModal)
