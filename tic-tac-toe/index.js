@@ -45,5 +45,7 @@ function showWinner(win) {
     for (let i of mainBoxes) {
         if (i.innerHTML !== '') counter++
     }
-    console.log(counter)
+    resultWin.innerHTML = `Player ${playerWin} has WON`;
+    resultMoves.innerHTML = `Moves: ${counter}`
+    mainModalWindow.style.display = 'block'
 };
