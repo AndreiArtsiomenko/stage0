@@ -31,12 +31,16 @@ function checkResultValidation() {
     for (let i = 0; i < combinations.length; i++) {
         if (mainBoxes[combinations[i][0]].innerHTML === 'X' && mainBoxes[combinations[i][1]].innerHTML === 'X' && mainBoxes[combinations[i][2]].innerHTML === 'X') {
             playerWin = 'X';
-            return showWinner(playerWin);
-        }
-        if (mainBoxes[combinations[i][0]].innerHTML === 'O' && mainBoxes[combinations[i][1]].innerHTML === 'O' && mainBoxes[combinations[i][2]].innerHTML === 'O') {
+            showWinner(playerWin);
+            break;
+        } else if (mainBoxes[combinations[i][0]].innerHTML === 'O' && mainBoxes[combinations[i][1]].innerHTML === 'O' && mainBoxes[combinations[i][2]].innerHTML === 'O') {
             playerWin = 'O';
             showWinner(playerWin);
+            break;
         }
+    }
+    if (playerMove === 9) {
+        showDraw()
     }
 }
 
@@ -45,8 +49,14 @@ function showWinner(win) {
     for (let i of mainBoxes) {
         if (i.innerHTML !== '') counter++
     }
-    resultWin.innerHTML = `Player ${playerWin} has WON`;
+    resultWin.innerHTML = `Player ${win} has WON`;
     resultMoves.innerHTML = `Moves: ${counter}`
+    mainModalWindow.style.display = 'block'
+};
+
+function showDraw() {
+    resultWin.innerHTML = 'Game ended in a draw';
+    resultMoves.innerHTML = '';
     mainModalWindow.style.display = 'block'
 };
 
